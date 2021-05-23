@@ -35,6 +35,7 @@ class DataAdapter(val data: List<DataItem>?, private val click: onClickItem) : R
             itemView.tvPenerima.text = get?.staffPenerima
             itemView.tvTanggal.text = get?.staffTanggal
             itemView.tvTipe.text = get?.staffTipe
+            itemView.tvTindakan.text = get?.staffTindakan
         }
     }
 

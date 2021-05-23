@@ -35,9 +35,9 @@ class Presenter (val crudView: CrudView) {
 
 
     //Add data
-    fun addData(name : String, keluhan : String, fakultas : String, penerima : String, tanggal : String, tipe : String){
+    fun addData(name : String, keluhan : String, fakultas : String, penerima : String, tanggal : String, tipe : String, tindakan : String){
         NetworkConfig.getService()
-                .addStaff(name, keluhan, fakultas, penerima, tanggal, tipe)
+                .addStaff(name, keluhan, fakultas, penerima, tanggal, tipe, tindakan)
                 .enqueue(object : retrofit2.Callback<ResultStatus>{
                     override fun onFailure(call: Call<ResultStatus>, t: Throwable) {
                         crudView.errorAdd(t.localizedMessage)
@@ -76,9 +76,9 @@ class Presenter (val crudView: CrudView) {
     }
 
     //Update Data
-    fun updateData(id: String, name: String, keluhan : String, fakultas : String, penerima : String, tanggal : String, tipe : String){
+    fun updateData(id: String, name: String, keluhan : String, fakultas : String, penerima : String, tanggal : String, tipe : String, tindakan : String){
         NetworkConfig.getService()
-                .updateStaff(id, name, keluhan, fakultas, penerima, tanggal, tipe)
+                .updateStaff(id, name, keluhan, fakultas, penerima, tanggal, tipe, tindakan)
                 .enqueue(object : retrofit2.Callback<ResultStatus>{
                     override fun onFailure(call: Call<ResultStatus>, t: Throwable) {
                         crudView.onErrorUpdate(t.localizedMessage)

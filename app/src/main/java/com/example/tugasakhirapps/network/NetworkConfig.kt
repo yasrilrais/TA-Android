@@ -47,7 +47,8 @@ interface StaffService{
                  @Field("fakultas") fakultas : String,
                  @Field("penerima") penerima : String,
                  @Field("tanggal") tanggal : String,
-                 @Field("tipe") tipe : String) : Call<ResultStatus>
+                 @Field("tipe") tipe : String,
+                 @Field("tindakan") tindakan : String) : Call<ResultStatus>
 
 
 
@@ -70,5 +71,6 @@ interface StaffService{
                     @Field("fakultas") fakultas : String,
                     @Field("penerima") penerima : String,
                     @Field("tanggal") tanggal : String,
-                    @Field("tipe") tipe : String) : Call<ResultStatus>
+                    @Field("tipe") tipe : String,
+                    @Field("tindakan") tindakan : String) : Call<ResultStatus>
 }

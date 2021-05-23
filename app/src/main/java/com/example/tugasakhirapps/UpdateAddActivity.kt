@@ -32,7 +32,8 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
                         etFakultas.text.toString(),
                         etPenerima.text.toString(),
                         etTanggal.text.toString(),
-                        etTipe.text.toString())
+                        etTipe.text.toString(),
+                        etTindakan.text.toString())
             }
 
         }else if (itemDataItem != null){
@@ -44,6 +45,7 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
             etPenerima.setText(item?.staffPenerima.toString())
             etTanggal.setText(item?.staffTanggal.toString())
             etTipe.setText(item?.staffTipe.toString())
+            etTindakan.setText(item?.staffTindakan.toString())
             btnAction.onClick {
                 presenter.updateData(
                         item?.staffId ?: "",
@@ -52,7 +54,8 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
                         etFakultas.text.toString(),
                         etPenerima.text.toString(),
                         etTanggal.text.toString(),
-                        etTipe.text.toString())
+                        etTipe.text.toString(),
+                        etTindakan.text.toString())
                 finish()
             }
 

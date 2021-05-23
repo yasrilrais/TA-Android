@@ -19,10 +19,6 @@ class MainActivity : AppCompatActivity(), CrudView {
         presenter = Presenter(this)
         presenter.getData()
 
-        btnTambah.setOnClickListener {
-            startActivity<UpdateAddActivity>()
-            finish()
-        }
     }
 
     override fun onSuccessGet(data: List<DataItem>?) {
