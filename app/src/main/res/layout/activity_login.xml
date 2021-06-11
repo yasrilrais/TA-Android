@@ -36,7 +36,7 @@
                 style="@style/df_h3"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
-                android:text="HaloRektor"
+                android:text="Tugas Akhir"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="#ffff"
@@ -45,15 +45,15 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="302dp"
-            android:layout_height="328dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="381dp"
                 android:clickable="true"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="20dp">
@@ -61,7 +61,7 @@
                 <LinearLayout
                     android:id="@+id/loginlayout"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="368dp"
                     android:gravity="center"
                     android:orientation="vertical"
                     android:padding="20dp">
@@ -71,9 +71,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="50dp"
-                        android:layout_marginBottom="30dp"
-                        android:text="Login sesuai SSO"
+                        android:layout_marginBottom="20dp"
                         android:fontFamily="@font/lato_bold"
+                        android:text="Sign In"
                         android:textAlignment="center"
                         android:textSize="18sp" />
 
@@ -81,42 +81,50 @@
                         android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Username"
-                        android:fontFamily="@font/open_sans"/>
+                        android:fontFamily="@font/open_sans"
+                        android:text="Username" />
 
                     <EditText
-                        android:id="@+id/editTextUsername"
+                        android:id="@+id/loginEmail"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName"
-                        android:fontFamily="@font/open_sans"/>
+                        android:fontFamily="@font/open_sans"
+                        android:inputType="textPersonName" />
 
                     <TextView
                         android:id="@+id/textView2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Password"
-                        android:fontFamily="@font/open_sans"/>
+                        android:fontFamily="@font/open_sans"
+                        android:text="Password" />
 
                     <EditText
-                        android:id="@+id/editTextPassword"
+                        android:id="@+id/loginPassword"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:ems="10"
                         android:inputType="textPassword" />
 
                     <Button
-                        android:id="@+id/buttonLogin"
-                        android:background="@drawable/custom1"
+                        android:id="@+id/btnLogin"
                         android:layout_width="match_parent"
                         android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
                         android:layout_marginTop="25dp"
-                        android:layout_marginBottom="80dp"
-                        android:text="LOGIN"
+                        android:background="@drawable/custom1"
                         android:fontFamily="@font/lato_bold"
-                        android:textColor="#ffff"
-                        android:layout_gravity="center_vertical"/>
+                        android:text="LOGIN"
+                        android:textColor="#ffff" />
+
+                    <Button
+                        android:id="@+id/btnRegist"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="80dp"
+                        android:background="@drawable/custom1"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="Sign Up"
+                        android:textColor="#ffff" />
 
                     <ProgressBar
                         android:id="@+id/progressSendingOtp"

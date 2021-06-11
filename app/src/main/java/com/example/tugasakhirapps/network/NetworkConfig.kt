@@ -48,7 +48,8 @@ interface StaffService{
                  @Field("penerima") penerima : String,
                  @Field("tanggal") tanggal : String,
                  @Field("tipe") tipe : String,
-                 @Field("tindakan") tindakan : String) : Call<ResultStatus>
+                 @Field("tindakan") tindakan : String,
+                 @Field("status") status : String) : Call<ResultStatus>
 
 
 
@@ -72,5 +73,20 @@ interface StaffService{
                     @Field("penerima") penerima : String,
                     @Field("tanggal") tanggal : String,
                     @Field("tipe") tipe : String,
-                    @Field("tindakan") tindakan : String) : Call<ResultStatus>
+                    @Field("tindakan") tindakan : String,
+                    @Field("status") status : String) : Call<ResultStatus>
+
+    //Fungsi Register
+    @FormUrlEncoded
+    @POST("registerStaff")
+    fun register(@Field("nama") nama : String?,
+                 @Field("nim") nim : String?,
+                 @Field("email") email : String?,
+                 @Field("password") password : String?) : Call<ResultStatus>
+
+    //Fungsi Login
+    @FormUrlEncoded
+    @POST("loginStaff")
+    fun login(@Field("email") email : String?,
+              @Field("password") password: String?) : Call<ResultStatus>
 }

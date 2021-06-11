@@ -1,6 +1,7 @@
 package com.example.tugasakhirapps.presenter
 
 import com.example.tugasakhirapps.model.DataItem
+import com.example.tugasakhirapps.model.Staff
 
 interface CrudView {
     //Untuk get data
@@ -18,5 +19,13 @@ interface CrudView {
     //Untuk Update
     fun onSuccessUpdate(msg : String)
     fun onErrorUpdate(msg : String)
+
+    //Untuk Register
+    fun onSuccessRegister(msg : String?)
+    fun onFailedRegister(msg: String?)
+
+    //Untuk Login
+    fun onSuccessLogin (msg : String?, data : Staff?)
+    fun onFailedLogin (msg : String?)
 
 }

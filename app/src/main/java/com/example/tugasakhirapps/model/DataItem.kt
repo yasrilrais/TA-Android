@@ -28,4 +28,7 @@ class DataItem : Serializable{
 
     @field:SerializedName("staff_tindakan")
     val staffTindakan: String? = null
+
+    @field:SerializedName("staff_status")
+    val staffStatus: String? = null
 }

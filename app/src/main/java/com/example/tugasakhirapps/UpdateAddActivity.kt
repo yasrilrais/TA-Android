@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.tugasakhirapps.model.DataItem
+import com.example.tugasakhirapps.model.Staff
 import com.example.tugasakhirapps.presenter.CrudView
 import com.example.tugasakhirapps.presenter.Presenter
 import kotlinx.android.synthetic.main.activity_update_add.*
+import org.jetbrains.anko.alert
 import org.jetbrains.anko.sdk27.coroutines.onClick
 import org.jetbrains.anko.startActivity
 
@@ -33,7 +35,8 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
                         etPenerima.text.toString(),
                         etTanggal.text.toString(),
                         etTipe.text.toString(),
-                        etTindakan.text.toString())
+                        etTindakan.text.toString(),
+                        etStatus.text.toString())
             }
 
         }else if (itemDataItem != null){
@@ -46,6 +49,7 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
             etTanggal.setText(item?.staffTanggal.toString())
             etTipe.setText(item?.staffTipe.toString())
             etTindakan.setText(item?.staffTindakan.toString())
+            etStatus.setText(item?.staffStatus.toString())
             btnAction.onClick {
                 presenter.updateData(
                         item?.staffId ?: "",
@@ -55,7 +59,8 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
                         etPenerima.text.toString(),
                         etTanggal.text.toString(),
                         etTipe.text.toString(),
-                        etTindakan.text.toString())
+                        etTindakan.text.toString(),
+                        etStatus.text.toString())
                 finish()
             }
 
@@ -85,4 +90,15 @@ class UpdateAddActivity : AppCompatActivity(), CrudView {
     override fun onSuccessDelete(msg: String) {}
 
     override fun onErrorDelete(msg: String) {}
+
+    override fun onSuccessRegister(msg: String?) {
+    }
+
+    override fun onFailedRegister(msg: String?) {
+    }
+    override fun onSuccessLogin(msg: String?, data: Staff?) {
+    }
+
+    override fun onFailedLogin(msg: String?) {
+    }
 }

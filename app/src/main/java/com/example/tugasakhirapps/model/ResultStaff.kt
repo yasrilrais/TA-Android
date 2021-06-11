@@ -10,5 +10,11 @@ data class ResultStaff (
         val staff: List<DataItem>? = null,
 
         @field:SerializedName("status")
-        val status: Int? = null
+        val status: Int? = null,
+
+        @field:SerializedName("message")
+        val message: String? = null,
+
+        @field:SerializedName("user")
+        val user: Staff? = null
 )
